@@ -1,0 +1,44 @@
+!PARAMETERS
+rndnumbersPerSeed: 100000
+seeds:
+- 1
+- 2
+- 3
+- 4
+- 5
+
+arrivals:
+   WEBSITE: 100.5
+
+queues:
+   WEBSITE:
+      servers: 1
+      capacity: 8
+      minArrival: 2.0
+      maxArrival: 6.0
+      minService: 1.0
+      maxService: 3.0
+   MODERATON:
+      servers: 1
+      capacity: 4
+      minService: 1.0
+      maxService: 2.0
+   REKOGNITION:
+      servers: 1
+      capacity: 12
+      minService: 3.0
+      maxService: 5.0
+
+network:
+-  source: WEBSITE
+   target: MODERATON
+   probability: 0.33
+-  source: WEBSITE
+   target: REKOGNITION
+   probability: 0.33
+-  source: MODERATON
+   target: WEBSITE
+   probability: 1.0
+-  source: REKOGNITION
+   target: MODERATON
+   probability: 1.0
