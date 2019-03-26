@@ -12,7 +12,7 @@ arrivals:
 
 queues:
    WEBSITE:
-      servers: 1
+      servers: 2
       capacity: 8
       minArrival: 2.0
       maxArrival: 6.0
