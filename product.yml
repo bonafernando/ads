@@ -20,12 +20,12 @@ queues:
       maxService: 3.0
    MODERATON:
       servers: 1
-      capacity: 4
+      capacity: 9
       minService: 1.0
       maxService: 2.0
    REKOGNITION:
       servers: 1
-      capacity: 12
+      capacity: 18
       minService: 3.0
       maxService: 5.0
 
